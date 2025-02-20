@@ -1,15 +1,16 @@
 <script>
-    
-  let totalDeNotas=prompt("Digite o total de notas") ;
-  let soma=0;
-  let contador=1;
+     let totalDeNotas = parseInt(prompt("Digite o total de notas"));
 
+let soma = 0;
+let contador= 1;
 
-  while(contador <= totalDeNotas){
-prompt(`Informe a nota ${contador}`);
-contador++;
-  }
-  let media=soma/totalDeNotas;
+while(contador <= totalDeNotas) {
+    soma += parseFloat(prompt(`Informe a nota ${contador}`));
+    contador++;
+}
 
-  alert(media); 
+let media = soma / totalDeNotas;
+
+alert(media);   
+
 </script>
