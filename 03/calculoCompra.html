@@ -1,0 +1,12 @@
+<script>
+
+const VALOR_MINIMO_PARA_DESCONTO = 150;
+    let valorCompra=Number( prompt("Digite o valor da sua compra"));
+    
+    if(valorCompra >= VALOR_MINIMO_PARA_DESCONTO) {
+        let valorDescontado= valorCompra = valorCompra - (valorCompra * 0.1);
+        console.log(`Valor final : ${valorDescontado} `);
+    } else {
+        console.log(`Para obter o desconto, faça compras acima de ${VALOR_MINIMO_PARA_DESCONTO}.`);
+    }
+</script>
