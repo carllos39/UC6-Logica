@@ -1,34 +1,38 @@
-for ($i = 1; $i -le 28; $i++) {                   
-    $folderName = $i.ToString().PadLeft(2, '0')
-    $folderPath = Join-Path -Path . -ChildPath $folderName
-    New-Item -ItemType Directory -Path $folderPath -Force
+Quadrado
+1-pegar uma folha de papel 
+2- pegar um lápis 
+3-fazer uma linha de na  horizontal de 20 cm
+4-fazer uma linha de na  vertical de 30 cm
 
-    $filePath = Join-Path -Path $folderPath -ChildPath "script.js"
-    New-Item -ItemType File -Path $filePath -Force
+Achar a palavra rato no dicionário
+1-pegar o dicionário, pedir para criança procurar   por ordem alfabetica.
+2- Até a  letra r.
+3- Procurar  a palavra rato.
 
-    $filePath = Join-Path -Path $folderPath -ChildPath "index.html"
-    New-Item -ItemType File -Path $filePath -Force
+Calculo de Média de Notas
+1-Digitar a primeira nota.
+2-Digitar a segunda nota.
+3-Digitar a terceira nota.
+4-Digitar a quarta nota.
+5-criar uma variável média.
+6-media =nota1,nota2nota3,nota4/4.
+7-se media maior ou igual  7
+escreva aluno aprovado.
+senao se media maior ou igual 5 
+escreva aluno de recuperação
+senao
+escreva aluno reprovado.
+fimalgoritmo
+   
+Pseudocodigo
+INÍCIO
+escrever "Digite o total de notas";
+ler totalDeNotas 
+para xcada nota em totalDeNotas
+ escrever "Informar a nota N";
+fimrepeticao
 
-    $filePath = Join-Path -Path $folderPath -ChildPath "playground.html"
-    New-Item -ItemType File -Path $filePath -Force
-
-    $filePath = Join-Path -Path $folderPath -ChildPath "atividade"
-    New-Item -ItemType Directory -Path $filePath -Force
-}
 
 
-for ($i = 1; $i -le 28; $i++) {
-    $folderName = $i.ToString().PadLeft(2, '0')
-    $folderPath = Join-Path -Path . -ChildPath $folderName
-    New-Item -ItemType Directory -Path $folderPath -Force
 
-    # Create files in the main folder
-    New-Item -ItemType File -Path (Join-Path -Path $folderPath -ChildPath "script.js") -Force
-    New-Item -ItemType File -Path (Join-Path -Path $folderPath -ChildPath "index.html") -Force
-    New-Item -ItemType File -Path (Join-Path -Path $folderPath -ChildPath "playground.html") -Force
-
-    # Create the "atividade" subfolder and its file
-    $atividadePath = Join-Path -Path $folderPath -ChildPath "atividade"
-    New-Item -ItemType Directory -Path $atividadePath -Force
-    New-Item -ItemType File -Path (Join-Path -Path $atividadePath -ChildPath "atividade.html") -Force
-}
+A psicologia das cores: Como as cores afetam a emoção e a razão
