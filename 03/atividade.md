@@ -8,8 +8,13 @@
 
 ```
 INICIO
-    LER
-    ESCREVA
+    LER distancia
+    se distancia <50>
+    ESCREVA "frete gratis";
+    senao se distancia < 100 entao
+    escreval "Valor 10.00";
+    senao
+    escreval "Valor 20.00";
 FIM
 ```
 

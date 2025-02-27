@@ -1,0 +1,43 @@
+<script>
+    let carnes = 7;
+    let arroz = 12;
+    let feijão = 8;
+
+    //while
+
+    //switch
+
+    while (carnes > 0 && arroz > 0 && feijão > 0) {
+        let opcao = Number(prompt("Escolha a marmita:\n 1-completa \n2-carne"));
+        switch (opcao) {
+            case 1:
+                alert("marmita completa");
+                carne--, arroz--, feijao--;
+                break;
+
+            case 2:
+                alert("carne");
+                carne -= 2;
+                break;
+                default:
+                    alert("Opcão inválida!");
+        }
+    }
+    alert("Fim de estoque de ingrediente!");
+    /*
+    Inicio
+    carnes=7,arroz=12,feijão=8
+
+    enquanto carnes >0, e arroz >0, e feijão >0
+    escreva "Que tipo de marmita deseja ?".
+    Leia opcao
+    cao  opcao==1
+    
+    caso opcao==2
+    
+    fimenquanto
+    fim
+    
+    */
+
+</script>
