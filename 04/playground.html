@@ -1,72 +1,75 @@
 <script>
-//while
-/*
-let estoque= 10; 
-while(estoque >0){
-    let qtdCompra=Number(prompt(`Temos ${estoque} paes .Quantos deseja?`))
+    /*
+    // while
+    let estoque = 10;
 
-    if(qtdCompra > estoque){
-   alert("Quantidade indísponivel!");
-    }else{
-        estoque=estoque-qtdCompra;
-        alert(`Compras realizadas, restam ${estoque} paes`);
-    }
-}
-alert("Estoque zerado !Padaria fechada.");
+    while(estoque > 0) {
+        let qtdCompra = Number(prompt(`Temos ${estoque} pães. Quantos deseja comprar?`));
 
-*/
-//do while
-/*
-let totalCompra= 0;
-let preco;
-
-do{
-preco=Number(prompt("Digite o valor do produto(ou zero para finaliza"));
-
-if(preco > 0){
-totalCompra += preco;
-alert(`Total atual da compra : ${totalCompra}`);
-}
-
-}while(preco!==0);
-alert(`Valor final das compras : ${totalCompra}`);
-*/
-//for
-/*
-let faturamento=[1200,1350,1100,1600,1750,2000];
-for(let dia=0;dia < faturamento.length;dia++){
-    alert(`Dia ${dia +1}: R$ ${faturamento[dia]}`);
-}
-*/
-/*
-let faturamento=[1200,1350,1100,1600,1750,2000];
-let total=0;
-for(let dia=0;dia < faturamento.length;dia++){
-    console.log(`Dia ${dia +1}: R$ ${faturamento[dia]}`);
-    total += faturamento[dia];
-}
-console.log(`Total ${total}`);
-*/
-
-//Uso do break e continue
-
-//Break
-
-let mesaDisponivel=5;
- while(true){
-    let qtdReserva=Number(prompt(`Temos ${mesaDisponivel} .Quantas mesas deseja reservar?`));
-    if(qtdReserva > mesaDisponivel){
-        alert("Reserva indisponível!");
-
-    }else{
-        alert(`Reserva confirmada para  ${qtdReserva} mesas`);  
-      mesaDisponivel -= qtdReserva;
-      alert(`Restam ${mesaDisponivel}`);
-        break;
+        if (qtdCompra > estoque) {
+            console.log("Quantidade indisponível.");
+        } else {
+            estoque -= qtdCompra;
+            console.log(`Compra realizada! Restam ${estoque} pães.`)
+        }
     }
 
- }
+    console.log("Estoque zerado. Padaria Fechada!");
+    */
 
+    /*
+    // do while
+    let totalCompra = 0;
+    let preco;
 
+    do {
+        preco = Number(prompt("Digite o valor do produto (ou 0 para finalizar)"));
+
+        if (preco > 0) {
+            totalCompra += preco;
+            console.log(`Total atual da compra: ${totalCompra}`);
+        }
+    } while (preco !== 0);
+
+    console.log(`Valor final da compra: R$ ${totalCompra}`);
+    */
+
+    /*
+    // for
+    let faturamento = [1200, 1350, 1100, 1600, 1750, 200];
+
+    for (let dia = 0; dia < faturamento.length; dia++) {
+        console.log(`Dia ${dia + 1}: R$ ${faturamento[dia]}`)       
+    }
+    */
+
+    // Uso do break e continue
+    /*
+    // BREAK
+    let mesasDisponiveis = 5;
+
+    while(true) {
+        let qtdReserva = Number(prompt("Quantas mesas deseja reservar?"));
+
+        if(qtdReserva > mesasDisponiveis) {
+            console.log("Reserva indisponível.");
+        } else {
+            console.log(`Reserva confirmada para ${qtdReserva} mesas`);
+            mesasDisponiveis -= qtdReserva;
+            break; // Sai do loop ao confirmar a reserva
+        }
+    } */
+
+    // CONTINUE
+    let pagamentos = [200, -50, 300, 0, 450];
+
+    for(let i = 0; i < pagamentos.length; i++) {
+        if(pagamentos[i] <= 0) {
+            // console.log(`Pagamento ${i + 1} inválido. Pulando...`);
+            continue;
+        }
+
+        console.log(`Pagamentos ${i + 1} registrado. R$ ${pagamentos[i]}`);
+    }
 
 </script>
