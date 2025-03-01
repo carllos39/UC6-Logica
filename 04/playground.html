@@ -1,0 +1,51 @@
+<script>
+//while
+/*
+let estoque= 10; 
+while(estoque >0){
+    let qtdCompra=Number(prompt(`Temos ${estoque} paes .Quantos deseja?`))
+
+    if(qtdCompra > estoque){
+   alert("Quantidade indísponivel!");
+    }else{
+        estoque=estoque-qtdCompra;
+        alert(`Compras realizadas, restam ${estoque} paes`);
+    }
+}
+alert("Estoque zerado !Padaria fechada.");
+
+*/
+//do while
+/*
+let totalCompra= 0;
+let preco;
+
+do{
+preco=Number(prompt("Digite o valor do produto(ou zero para finaliza"));
+
+if(preco > 0){
+totalCompra += preco;
+alert(`Total atual da compra : ${totalCompra}`);
+}
+
+}while(preco!==0);
+alert(`Valor final das compras : ${totalCompra}`);
+*/
+//for
+/*
+let faturamento=[1200,1350,1100,1600,1750,2000];
+for(let dia=0;dia < faturamento.length;dia++){
+    alert(`Dia ${dia +1}: R$ ${faturamento[dia]}`);
+}
+*/
+let faturamento=[1200,1350,1100,1600,1750,2000];
+let total=0;
+for(let dia=0;dia < faturamento.length;dia++){
+    console.log(`Dia ${dia +1}: R$ ${faturamento[dia]}`);
+    total += faturamento[dia];
+}
+console.log(`Total ${total}`);
+
+
+
+</script>
