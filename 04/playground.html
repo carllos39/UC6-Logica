@@ -38,6 +38,7 @@ for(let dia=0;dia < faturamento.length;dia++){
     alert(`Dia ${dia +1}: R$ ${faturamento[dia]}`);
 }
 */
+/*
 let faturamento=[1200,1350,1100,1600,1750,2000];
 let total=0;
 for(let dia=0;dia < faturamento.length;dia++){
@@ -45,6 +46,26 @@ for(let dia=0;dia < faturamento.length;dia++){
     total += faturamento[dia];
 }
 console.log(`Total ${total}`);
+*/
+
+//Uso do break e continue
+
+//Break
+
+let mesaDisponivel=5;
+ while(true){
+    let qtdReserva=Number(prompt(`Temos ${mesaDisponivel} .Quantas mesas deseja reservar?`));
+    if(qtdReserva > mesaDisponivel){
+        alert("Reserva indisponível!");
+
+    }else{
+        alert(`Reserva confirmada para  ${qtdReserva} mesas`);  
+      mesaDisponivel -= qtdReserva;
+      alert(`Restam ${mesaDisponivel}`);
+        break;
+    }
+
+ }
 
 
 
