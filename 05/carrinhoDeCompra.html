@@ -1,25 +1,20 @@
 <script>
-    let carrinho = [];
-
-    function adicionarItemAoCarrinho(itens) {
-      carrinho.push(itens);
+    let carrinho=[];
+    function adicionarItemAoCarrinho(item){
+ carrinho.push(item);
     }
+    function removerItemDoCarrinho(){
 
-    function removerItemDoCarrinho() {
-    carrinho.pop();
-    }
+}
+function limparCarrinho(){
 
-    function limparCarrinho() {
-    carrinho=[];
-    }
-
-adicionarItemAoCarrinho("Sabão");
-adicionarItemAoCarrinho("Papel");
-adicionarItemAoCarrinho("Toalha");
+}
+adicionarItemAoCarrinho("sabão");
+adicionarItemAoCarrinho("papel");
+adicionarItemAoCarrinho("toalha");
 carrinho.push();
 removerItemDoCarrinho();
-console.log(carrinho);
+alert(carrinho);
 limparCarrinho();
-console.log(carrinho);
-
+alert(carrinho);
 </script>
