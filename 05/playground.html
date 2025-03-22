@@ -1,0 +1,43 @@
+<script>
+    //Criando array de produtos
+    produtos=["arroz","feijão","macarrão","açucar"];
+    alert("Produto1", produtos);
+    let clietes=["Donald","Mickey","Pluto"];
+    clietes.push("Margarida");//Adiciona um elemento no final
+    clietes.shift();//Remove o primeiro elemento
+    alert("Clientes :" ,clietes);
+
+    //Adicionando um produto par lista
+    produtos.push("café");//Adicionando no final
+    produtos.unshift("sal");//Adiciona no inicio
+    alert("Produto2", produtos);
+    //Removde um produto da lista
+    produtos.pop();//Remove do final
+    alert("Produto3",produtos);
+
+    //Pecorrendo um array com for
+    for(let i=0; i < produtos.lenght;i++){
+alert(`Produtos ${i + 1}  ${produtos[i]}`);
+    }
+    //Percorrendo uma lista forEach
+    clietes.forEach((value,index)=>{
+alert(`Clientes : ${index + 1} ${value}`);
+    });
+
+    //Operadores comum
+    let preco=[25.50,10.00,40.75,5.99];
+
+    for(let i=preco.length;i >=0 ;i--){
+        if(preco[i] > 25){
+alert(preco[i]);
+        }
+    }
+
+    preco.reverse();
+    preco.sort();
+    alert(preco);
+    precoAlto=preco.filter(p=>p > 15);
+    alert(precoAlto);
+    clientesComM = clietes.find(nome =>nome.startsWith("M"));
+    alert(clientesComM);
+</script>
