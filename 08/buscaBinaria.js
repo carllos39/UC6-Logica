@@ -7,7 +7,7 @@ let clientes = ["Ana", "Carlos", "Gabriel", "Joao", "Maria"];
 // console.log(numeros.indexOf(100));//Retorna -1
 
 
-function buscaBinaria(array, valor) {
+export function buscaBinaria(array, valor) {
     let meio = Math.floor(array.length / 2);
     let inicio = 0
     let final = array.length - 1;

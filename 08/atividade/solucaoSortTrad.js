@@ -6,29 +6,32 @@ let pessoas = [
     { nome: "Maria", nascimento: "1995-08-19", tipoSanguineo: "O-", cpf: "56789012344", telefone: "955555555" },
     { nome: "Pedro", nascimento: "1993-12-05", tipoSanguineo: "A+", cpf: "67890123455", telefone: "944444444" }
 ];
-pessoas.sort();
 
-// BUSCA BINÁRIA POR JOÃO, PARA ISSO A LISTA PRECISA ESTAR ORDENADA POR CPFlet alunos = [
-
-
-
-  function buscaBinaria(array, valor) {
-    let meio = Math.floor(array.length / 2);
+function buscaBinaria(lista, nome) {
     let inicio = 0
-    let final = array.length - 1;
+    let final = lista.length - 1;
 
-    while(inicio <= final){
+    while (inicio <= final) {
         let meio = Math.floor((inicio + final) / 2);
 
-        if (array[meio].cpf === valor) {
+        if (lista[meio].nome === nome) {
             return meio;
-        } else if (array[meio].cpf < valor) {
+        } else if (lista[meio].nome < nome) {
             inicio = meio + 1;
         } else {
             final = meio - 1;
         }
     }
+    
     return -1;
 }
 
-console.log(buscaBinaria(pessoas, "67890123455"));
+// Ordem Original
+console.log(pessoas);
+
+//pessoas.sort((a, b) => a.telefone.localeCompare(b.telefone)); // ordenção
+
+// Ordenado por Telefone
+console.log(pessoas)
+
+console .log(buscaBinaria(pessoas,"Pedro"));
