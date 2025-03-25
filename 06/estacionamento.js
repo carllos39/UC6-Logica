@@ -35,3 +35,10 @@ removerCarro(1,1);
 exibirEstacionamento();
 estacionarCarro(1, 1, "TTT0055");
 exibirEstacionamento();
+estacionarCarro(1,2, "fda3096");
+exibirEstacionamento();
+removerCarro(1,1);
+exibirEstacionamento();
+estacionarCarro(2,2, "fda3096");
+exibirEstacionamento();
+
