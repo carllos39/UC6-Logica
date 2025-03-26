@@ -28,4 +28,4 @@ strictEqual(objetoResultado.nome, "Ana", "❌ Erro na busca binária (nome não 
 let resultadoNulo = buscaBinaria(pessoasOrdenadas, "Lucas");
 strictEqual(resultadoNulo, -1, "❌ Erro na busca binária (retorno incorreto)");
 
-console.log("✅ Todos os testes passaram!")
+console.log("✅ Todos os testes passaram!");
