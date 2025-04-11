@@ -1,35 +1,50 @@
 class Funcionario{
-    nomeCompleto;
-    numeroMatricula;
-    anoAdmissao;
-    endereco;
-    salario;
+    #nome;
+    #matricula;
+    #anoAdmissao;
+    #endereco;
     
-    constructor(nomeCompleto,numeroMatricula,anoAdmissao,endereco,salario){
-        this.nomeCompleto=nomeCompleto;
-        this.numeroMatricula=numeroMatricula;
-        this.anoAdmissao=anoAdmissao;
-        this.endereco=endereco;
-        this.salario=salario;
+    
+    constructor(nome,matricula,anoAdmissao,endereco){
+        this.#nome  =nome;
+        this.#matricula=matricula;
+        this.#anoAdmissao=anoAdmissao;
+        this.#endereco=endereco;
+    
 
     }
+
+    getNome(){
+        return this.#nome;
+    }
+    
+    getMatricula(){
+        return this.#matricula;
+    }
+    
+    getAdmissao(){
+        return this.#anoAdmissao;
+    }
+    
+    getEndereco(){
+        return this.#endereco;
+    }
     receberSalario(salario){
-   if(this.salario === salario){
-   console.log(`Funcionario recebeu ${salario}`);
-   }else{
-    console.log(`Funcionario não recebeu salario`);
+   
+   return `Funcionario ${this.getNome()}recebeu salario R$${salario}`;
+   
    }
     }
-     ano=2025;
-    verificarTempoDeEmpresa(ano){
+     
+    verificarTempoDeEmpresa(anoAtual){
        
-        console.log(`Tempo de empresa do  ${this.nomeCompleto} é: ${ano - this.anoAdmissao}`)
+        return`Tempo de empresa do  ${this.nomeCompleto} é: ${anoAtual - this.anoAdmissao}`;
     }
 
     baterPonto(){
-console.log(`Ponto registrado para ${this.nomeCompleto}`);
+   return`Ponto registrado para ${this.nomeCompleto}`;
     }
-}
+
 
 class Gerente extends Funcionario {
     autorizacaoDespesas;
