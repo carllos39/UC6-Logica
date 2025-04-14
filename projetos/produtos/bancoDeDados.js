@@ -1,4 +1,5 @@
 
+import { Produto } from "./produto";
 export class BancoDeDados {
     // CREATE
     static salvar(produto){
