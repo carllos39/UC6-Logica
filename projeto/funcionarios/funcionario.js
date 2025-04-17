@@ -78,5 +78,6 @@ class Estagiario extends Funcionario{
 
     }
 }
-let gerente= new Funcionario("Manoel Silva",1212,2000,"Rua Catão",3400);
+let gerente= new Funcionario();
+gerente.cargo("Encarregado");
 console.log(gerente);

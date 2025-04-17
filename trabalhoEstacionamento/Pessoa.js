@@ -39,3 +39,5 @@ class Funcionario extends Pessoa{
  get cargo() { return this.#cargo; } 
  
 }
+let c1=new Pessoa("cpf","nome");
+console.log(c1);
