@@ -17,9 +17,10 @@ class Cliente extends Pessoa{
  #veiculo;
 
  constructor(id,veiculo){
+  super(cpf,nome);
     this.#id = id;
     this.#veiculo = veiculo;
-    super(this.cpf,nome);
+  
  } 
  get id() { return this.#id; }
  get veiculo() { return this.#veiculo; } 
@@ -30,14 +31,19 @@ class Funcionario extends Pessoa{
   #cargo; 
 
   constructor(matricula,cargo){
-  
+    super(cpf,nome);
     this.#matricula = matricula;
     this.#cargo = cargo;
-    super(this.cpf,nome);
+    
  } 
  get matricula() { return this.#matricula; }
  get cargo() { return this.#cargo; } 
  
 }
-let c1=new Pessoa("cpf","nome");
-console.log(c1);
+let funcionario=new Pessoa();
+funcionario.nome("Jorge Arruda");
+funcionario.cpf(14847812301);
+funcionario.id(1);
+funcionario.matricula(1445);
+funcionario.cargo("manobrista");
+console.log(funcionario);
