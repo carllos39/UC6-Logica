@@ -4,7 +4,9 @@ document.getElementById("frmCliente").addEventListener("submit", (e) =>{
     const veiculo = document.getElementById("veiculo").value ;
     const nome = document.getElementById("nome").value ;
     const cpf = document.getElementById("cpf").value ;
-
+    
+ let cliente = new Cliente(veiculo,nome,cpf);
+ bancoDeDados.salvar(cliente);
 });
 
 document.getElementById("frmFuncionario").addEventListener("submit", (e) =>{

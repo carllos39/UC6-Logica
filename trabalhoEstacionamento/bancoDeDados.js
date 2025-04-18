@@ -12,16 +12,16 @@ export class BancoDeDados {
     }
 }
 
- buscarTodos() {
+static buscarTodos() {
     // cria um array de produtos vazio
-    const cliente = [];
+    const clientes = [];
 
     // percorre o localStorage buscando todos os dados (JSON)
     for(let i = 0; i < localStorage.length; i++) {
         const chave = localStorage.key(i);
         if(!isNaN(parseInt(chave))) {
             const dados = JSON.parse(localStorage.getItem(chave));
-            produtos.push(Cliente.fromJSON(dados)); 
+            clientes.push(Cliente.fromJSON(dados)); 
         }
     }
 
