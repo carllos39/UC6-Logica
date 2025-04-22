@@ -12,11 +12,11 @@ export class Pessoa {
 
 }
 
-class Cliente extends Pessoa {
+export class Cliente extends Pessoa {
   #id;
   #veiculo;
 
-  constructor( veiculo, nome, cpf) {
+  constructor( veiculo, cpf,nome) {
     super(cpf, nome);
     this.#id = Cliente.getProximoId(id);
     this.#veiculo = veiculo;
@@ -34,7 +34,7 @@ class Cliente extends Pessoa {
   }
 
 }
-class Funcionario extends Pessoa {
+export class Funcionario extends Pessoa {
   #id;
   #matricula;
   #cargo;
@@ -79,14 +79,5 @@ class Funcionario extends Pessoa {
 
 
 
-
-// let funcionario = new Funcionario(23445566, "manobrista");
-// let cli = new Cliente(1, "vw", "jorge", 12321);
-// console.log(cli.id);
-
-// funcionario.nome;
-// funcionario.cpf;
-// funcionario.id;
-// funcionario.matricula(1445);
-// funcionario.cargo("manobrista");
-// console.log(funcionario.nome, funcionario.matricula);
+let cliente =new Cliente(1,"palio",1224555,"Rita Maria");
+console.log(cliente);
