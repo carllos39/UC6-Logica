@@ -24,6 +24,12 @@ export class Cliente extends Pessoa {
   }
   get id() { return this.#id; }
   get veiculo() { return this.#veiculo; }
+
+  
+
+  toString() {
+    return `ID:${this.id}| Veiculo : ${this.veiculo} | CPF: ${this.cpf} | Nome: ${this.nome}`;
+}
   
   static getProximoId() {
     let maxId = 0;
@@ -43,7 +49,7 @@ export class Cliente extends Pessoa {
 }
 
   static fromJSON(json) {
-    const cliente = new Cliente(jon.id,json.veiculo, json.cpf, json.nome);
+    const cliente = new Cliente(json.id,json.veiculo, json.cpf, json.nome);
     cliente.#id = json.id;
     return cliente;
   }
@@ -64,6 +70,11 @@ export class Funcionario extends Pessoa {
   get matricula() { return this.#matricula; }
   get cargo() { return this.#cargo; }
 
+
+  
+  toString() {
+    return `ID:${this.id}| Matricula : ${this.#matricula}|Cargo:${this.cargo} | CPF: ${this.cpf} | Nome: ${this.nome}`;
+}
   static getProximoId() {
     let maxId = 0;
 
