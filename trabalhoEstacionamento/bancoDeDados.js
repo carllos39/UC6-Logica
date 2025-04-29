@@ -17,14 +17,14 @@ export class BancoDeDados {
     static buscarTodos(){
         const clientes=[];
      
-         for(let i=0; i < localStorage.length;i++){
+         for(let i= 0; i < localStorage.length;i++){
              const chave = localStorage.key(i);
              if(!isNaN(parseInt(chave))){
-                 const dados = JSON.parse( localStorage.getItem(dados));
+                 const dados = JSON.parse( localStorage.getItem(chave));
                  clientes.push(Cliente.fromJSON(dados));
              }
          }
-         return clientes.sort((a,b)=>a.id - a.id);
+         return clientes.sort((a,b)=>a.id - b.id);
 
     
  }

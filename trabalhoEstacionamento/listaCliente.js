@@ -3,14 +3,14 @@ const ul= document.getElementById("listaCliente");
 const clientes=BancoDeDados.buscarTodos();
 if(clientes.length ===0){
 ul.innerHTML="<li>Nenhum cliente cadastrado!</li>";
-}
+
 clientes.forEach(c => {
   const li = document.createElement("li");
   li.textContent = c.toString();
   
   const btnEditar= document.createElement("button");
   btnEditar.textContent("Editar");
-  btnEditar.onclick = ()=> window.location.href="formularioCliente.html?id=c.id";
+  btnEditar.onclick = ()=> window.location.href=`formularioCliente.html?id=${c.id}`;
 
   const btnExcluir= document.createElement("button");
   btnExcluir.textContent("Editar");
@@ -21,3 +21,4 @@ clientes.forEach(c => {
   li.append(btnEditar,btnExcluir);
   ul.appendChild(li);
 });
+}

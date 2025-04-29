@@ -18,7 +18,7 @@ export class Cliente extends Pessoa {
 
   constructor( veiculo, cpf,nome) {
     super(cpf, nome);
-    this.#id = Cliente.getProximoId(id);
+    this.#id = Cliente.getProximoId();
     this.#veiculo = veiculo;
 
   }
@@ -42,10 +42,8 @@ export class Cliente extends Pessoa {
 
 }
 
-
-
   static fromJSON(json) {
-    const cliente = new Cliente(json.veiculo, json.nome, json.cpf);
+    const cliente = new Cliente(jon.id,json.veiculo, json.cpf, json.nome);
     cliente.#id = json.id;
     return cliente;
   }
@@ -58,7 +56,7 @@ export class Funcionario extends Pessoa {
 
   constructor(matricula, nome, cpf, cargo) {
     super(cpf, nome);
-    this.#id=Funcionario.getProximoId(id);
+    this.#id=Funcionario.getProximoId();
     this.#matricula = matricula;
     this.#cargo = cargo;
 
