@@ -24,6 +24,23 @@ export class Cliente extends Pessoa {
   }
   get id() { return this.#id; }
   get veiculo() { return this.#veiculo; }
+  
+  static getProximoId() {
+    let maxId = 0;
+
+    for (let i = 0; i < localStorage.length; i++) {
+        const chave = localStorage.key(i);
+
+        if (!isNaN(parseInt(chave))) {
+         maxId = Math.max(maxId,parseInt(chave));
+        }
+
+    }
+    return maxId + 1;
+
+
+
+}
 
 
 
@@ -78,6 +95,3 @@ export class Funcionario extends Pessoa {
 
 
 
-
-let cliente =new Cliente(1,"palio",1224555,"Rita Maria");
-console.log(cliente);

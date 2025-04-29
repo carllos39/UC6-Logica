@@ -9,7 +9,7 @@ document.getElementById("frmCliente").addEventListener("submit", (e) =>{
     const nome = document.getElementById("nome").value ;
   
     
- let cliente = new Cliente(veiculo,cpf,nome);
+ let cliente = new Cliente(id,veiculo,cpf,nome);
  BancoDeDados.salvar(cliente);
 });
 
