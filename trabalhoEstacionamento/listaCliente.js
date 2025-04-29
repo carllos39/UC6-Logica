@@ -1,7 +1,9 @@
 import { BancoDeDados } from "./bancoDeDados.js";
 const ul= document.getElementById("listaCliente");
 const clientes=BancoDeDados.buscarTodos();
-
+if(clientes.length ===0){
+ul.innerHTML="<li>Nenhum cliente cadastrado!</li>";
+}
 clientes.forEach(c => {
   const li = document.createElement("li");
   li.textContent = c.toString();
